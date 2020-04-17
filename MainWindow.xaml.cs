@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
 using System.Windows.Navigation;
 
 namespace MASU25
@@ -33,6 +34,15 @@ namespace MASU25
 
             // コース選択ページに遷移
             NavigationService.Navigate(new course_select());
+        }
+
+        // アプリケーションを閉じようとしたときの処理
+        private void NavigationWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (CustomMsgBox.Show(Window.GetWindow(this), "２５マスけいさんをおわりにしますか？", "２５マス計算ソフト", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

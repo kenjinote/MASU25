@@ -21,7 +21,7 @@ namespace MASU25
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             kekkatext.Text = "";
-            kekkatext.Inlines.Add("あなたが１分間に解いた、");
+            kekkatext.Inlines.Add("あなたが１分間に解いた");
             kekkatext.Inlines.Add(new Run(Environment.NewLine));
             switch (mainWindow.course_check)
             {
@@ -38,7 +38,7 @@ namespace MASU25
                     kekkatext.Inlines.Add("わりざんは");
                     break;
             }
-            kekkatext.Inlines.Add(new Run(mainWindow.OKCount.ToString("　0　")) { FontSize = 36, Foreground = Brushes.Red });
+            kekkatext.Inlines.Add(new Run(mainWindow.OKCount.ToString("　0　")) { FontSize = 25, Foreground = Brushes.Red });
             kekkatext.Inlines.Add("問です");
         }
 

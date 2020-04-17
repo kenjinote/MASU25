@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Background="Navy" Loaded="Page_Loaded">
+      Background="Navy" Loaded="Page_Loaded"
+      FocusManager.FocusedElement="{Binding ElementName=kekkatext}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="4*" />
@@ -23,20 +24,20 @@
         </Border>
         <Border Background="White" Grid.Row="3">
             <Viewbox >
-                <TextBlock x:Name="kekkatext" TextAlignment="Center">
-                    あなたが１分間に解いた、<LineBreak />
-                    たしざんは ９ 問です。
+                <TextBlock x:Name="kekkatext" TextAlignment="Center" FontFamily="MS Gothic">
+                    あなたが１分間に解いた<LineBreak />
+                    たしざんは 999 問です
                 </TextBlock>
             </Viewbox>
         </Border>
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="17*" />
-                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="8*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <Viewbox Grid.Column="1">
-                <Button Content="さいしょにもどる" Grid.Column="2" Click="Button_Click"/>
+                <Button Content="さいしょにもどる" Grid.Column="2" Click="Button_Click" IsCancel="True" IsDefault="True"/>
             </Viewbox>
         </Grid>
     </Grid>

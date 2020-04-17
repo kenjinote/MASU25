@@ -20,10 +20,7 @@ namespace MASU25
 
         private void exitbutton_Click(object sender, RoutedEventArgs e)
         {
-            if (CustomMsgBox.Show(Window.GetWindow(this), "２５マスけいさんをおわりにしますか？", "２５マス計算ソフト", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
-            {
-                Application.Current.Shutdown();
-            }
+            mainWindow.Close();
         }
 
         private void beginbutton_Click(object sender, RoutedEventArgs e)

@@ -88,10 +88,10 @@
                     <RowDefinition Height="5*" />
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="1">
-                    <Button x:Name="beginbutton" Content="はじめる" VerticalAlignment="Top" Click="beginbutton_Click" />
+                    <Button x:Name="beginbutton" Content="はじめる" VerticalAlignment="Top" Click="beginbutton_Click" IsDefault="True" />
                 </Viewbox>
                 <Viewbox Grid.Row="3">
-                    <Button x:Name="exitbutton" Content="おわる" VerticalAlignment="Top" Grid.Row="1" Click="exitbutton_Click"/>
+                    <Button x:Name="exitbutton" Content="おわる" VerticalAlignment="Top" Grid.Row="1" Click="exitbutton_Click" IsCancel="True"/>
                 </Viewbox>
             </Grid>
         </Grid>

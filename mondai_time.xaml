@@ -135,7 +135,7 @@
                 <Label x:Name="timelabel" Content ="60秒" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="MS PMincho" FontSize="72" Foreground="Yellow"/>
             </Viewbox>
             <Viewbox Grid.Row="3" Margin="5">
-                <Button x:Name="backbutton" Content ="もどる" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="backbutton_Click" Focusable="False"/>
+                <Button x:Name="backbutton" Content ="もどる" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="backbutton_Click" Focusable="False" IsCancel="True"/>
             </Viewbox>
         </Grid>
     </Grid>
