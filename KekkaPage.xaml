@@ -1,0 +1,43 @@
+﻿<Page x:Class="MASU25.KekkaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Navy" Loaded="Page_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Border Background="White" Grid.Row="1">
+            <Viewbox >
+                <Label HorizontalContentAlignment="Center" Content="結果" VerticalContentAlignment="Center" FontSize="72" FontFamily="MS Gothic"/>
+            </Viewbox>
+        </Border>
+        <Border Background="White" Grid.Row="3">
+            <Viewbox >
+                <TextBlock x:Name="kekkatext" TextAlignment="Center">
+                    あなたが１分間に解いた、<LineBreak />
+                    たしざんは ９ 問です。
+                </TextBlock>
+            </Viewbox>
+        </Border>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="17*" />
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1">
+                <Button Content="さいしょにもどる" Grid.Column="2" Click="Button_Click"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

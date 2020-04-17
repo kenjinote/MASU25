@@ -1,0 +1,45 @@
+﻿<Page x:Class="MASU25.SecondPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Navy" Loaded="Page_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Border Background="White" Grid.Row="1">
+            <Viewbox >
+                <Label x:Name="label" HorizontalContentAlignment="Center" Content="たしざん" Foreground="Navy" VerticalContentAlignment="Center"/>
+            </Viewbox>
+        </Border>
+        <Border Background="White" Grid.Row="3">
+            <Viewbox >
+                <Label HorizontalContentAlignment="Center" Content="１分間 ２５マス計算" VerticalContentAlignment="Center"/>
+            </Viewbox>
+        </Border>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="12*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="1">
+                <Button x:Name="startbuttton" Content="スタート" Click="startbuttton_Click"/>
+            </Viewbox>
+            <Viewbox Grid.Column="3">
+                <Button x:Name="backbutton" Content="もどる" Grid.Column="2" Click="backbutton_Click"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>
